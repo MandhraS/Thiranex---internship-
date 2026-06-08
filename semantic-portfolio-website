@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal Portfolio Website using Semantic HTML5 and Accessibility Features">
+    <meta name="keywords" content="HTML5, Portfolio, Accessibility, Semantic Tags, WCAG">
+    <meta name="author" content="Mandhra">
+
+    <title>Personal Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            line-height:1.6;
+            background:#f4f4f4;
+            color:#333;
+        }
+
+        header{
+            background:#222;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#444;
+            padding:10px;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            gap:20px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav a:hover,
+        nav a:focus{
+            color:yellow;
+        }
+
+        main{
+            padding:20px;
+        }
+
+        section{
+            background:white;
+            margin-bottom:20px;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        article{
+            margin-top:10px;
+        }
+
+        aside{
+            background:#ddd;
+            padding:15px;
+            border-left:5px solid #444;
+            margin-top:20px;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+        }
+
+        input,
+        textarea,
+        button{
+            padding:10px;
+            font-size:16px;
+        }
+
+        button{
+            background:#222;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#555;
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header role="banner">
+        <h1>Mandhra's Portfolio</h1>
+        <p>Web Developer | CSE Student</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main Navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <article>
+                <p>
+                    Hello! I am Mandhra, a Computer Science Engineering student 
+                    passionate about web development and programming.
+                </p>
+            </article>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>Portfolio Website</h3>
+                <p>
+                    Developed a responsive portfolio website using Semantic HTML5 and CSS.
+                </p>
+            </article>
+
+            <article>
+                <h3>Student Management System</h3>
+                <p>
+                    Created a mini project for managing student records efficiently.
+                </p>
+            </article>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>C Programming</li>
+            </ul>
+        </section>
+
+        <!-- Aside Section -->
+        <aside aria-label="Additional Information">
+            <h3>Quick Info</h3>
+            <p>
+                This website follows WCAG accessibility guidelines 
+                and uses semantic HTML5 structure.
+            </p>
+        </aside>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form aria-label="Contact Form">
+
+                <label for="name">Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="message">Message</label>
+                <textarea 
+                    id="message" 
+                    name="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                    required>
+                </textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>
+            © 2026 Mandhra Portfolio Website | All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+</html>
