@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="todo-panel" aria-labelledby="app-title">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Task Board</p>
+          <h1 id="app-title">To-Do List</h1>
+        </div>
+        <p class="task-count" id="task-count" aria-live="polite">0 active</p>
+      </header>
+
+      <form class="task-form" id="task-form">
+        <label class="sr-only" for="task-input">New task</label>
+        <input
+          id="task-input"
+          type="text"
+          placeholder="Add a task..."
+          maxlength="120"
+          autocomplete="off"
+          required
+        >
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="filters" role="tablist" aria-label="Task filters">
+        <button class="filter-button active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-button" type="button" data-filter="active" role="tab" aria-selected="false">Active</button>
+        <button class="filter-button" type="button" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      </div>
+
+      <ul class="task-list" id="task-list" aria-label="Tasks"></ul>
+
+      <p class="empty-state" id="empty-state">No tasks yet. Add one above.</p>
+    </section>
+  </main>
+
+  <template id="task-template">
+    <li class="task-item">
+      <label class="task-check">
+        <input type="checkbox" data-action="toggle">
+        <span class="custom-checkbox" aria-hidden="true"></span>
+      </label>
+      <span class="task-text"></span>
+      <form class="edit-form" hidden>
+        <label class="sr-only">Edit task</label>
+        <input class="edit-input" type="text" maxlength="120">
+        <button type="submit">Save</button>
+      </form>
+      <div class="task-actions">
+        <button class="icon-button" type="button" data-action="edit" aria-label="Edit task">Edit</button>
+        <button class="icon-button danger" type="button" data-action="delete" aria-label="Delete task">Delete</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
